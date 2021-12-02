@@ -9,17 +9,15 @@ const parser = file => {
 };
 
 const logResults = function() {
-	const arr = parser(input);
+	const data = parser(input);
 	const args = [...arguments];
 
-	for (let i in args) {
-	  const fn = args[i];
-
-	  if (typeof fn !== 'function') continue;
-
-		const result = fn(arr);
-		console.log(`Part ${+i + 1} result: ${result}`);
-  }
+  args.forEach((fn, i) => {
+    if (typeof fn === 'function') {
+      const result = fn(data);
+      console.log(`Part ${i + 1} result: ${result}`);
+    }
+  });
 };
 
 module.exports = {parseFile: parser, logResults};
