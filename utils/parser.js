@@ -8,8 +8,8 @@ const parser = file => {
 	return data.split('\n');
 };
 
-const logResults = async function() {
-	const arr = await parser(input);
+const logResults = function() {
+	const arr = parser(input);
 	const args = [...arguments];
 
 	args.forEach((fn, i) => {
