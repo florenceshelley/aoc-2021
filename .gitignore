@@ -1,4 +1,10 @@
-**/.DS_Store
-*.sw*
-.idea
+# modules
 node_modules
+
+# local
+.env
+
+# misc
+.idea
+*.sw*
+**/.DS_Store

@@ -4,9 +4,18 @@
   "description": "Flo's solutions to Advent of Code 2021",
   "main": "index.js",
   "scripts": {
-    "test": "mocha \"./**/*.test.js\""
+    "fetch:input": "curl -X GET https://adventofcode.com/2021/day/$INPUT/input --cookie session=$SESSION -o input/$DAY.txt",
+    "solve": "node **/$DAY/ **/$DAY.txt",
+    "test": "node_modules/.bin/mocha \"./**/*.test.js\"",
+    "test:single": "node_modules/.bin/mocha -- \"./**/$DAY.test.js\"",
+    "test:watch-all": "node_modules/.bin/mocha --watch \"./**/*.test.js\"",
+    "test:watch-single": "node_modules/.bin/mocha -- --watch \"./**/$DAY.test.js\""
   },
-  "keywords": ["aoc", "aoc-2021", "advent of code"],
+  "keywords": [
+    "aoc",
+    "aoc-2021",
+    "advent of code"
+  ],
   "author": "Florence Shelley",
   "license": "ISC",
   "devDependencies": {
