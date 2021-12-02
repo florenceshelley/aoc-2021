@@ -1,0 +1,16 @@
+{
+  "name": "aoc-2021",
+  "version": "1.0.0",
+  "description": "Flo's solutions to Advent of Code 2021",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha \"./**/*.test.js\""
+  },
+  "keywords": ["aoc", "aoc-2021", "advent of code"],
+  "author": "Florence Shelley",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3"
+  }
+}
