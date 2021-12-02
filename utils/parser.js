@@ -12,10 +12,14 @@ const logResults = function() {
 	const arr = parser(input);
 	const args = [...arguments];
 
-	args.forEach((fn, i) => {
+	for (let i in args) {
+	  const fn = args[i];
+
+	  if (typeof fn !== 'function') continue;
+
 		const result = fn(arr);
-		console.log(`Part ${i + 1} result: ${result}`);
-	});
+		console.log(`Part ${+i + 1} result: ${result}`);
+  }
 };
 
 module.exports = {parseFile: parser, logResults};
