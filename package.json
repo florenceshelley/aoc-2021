@@ -4,7 +4,7 @@
   "description": "Flo's solutions to Advent of Code 2021",
   "main": "index.js",
   "scripts": {
-    "fetch:input": "curl -X GET https://adventofcode.com/2021/day/$INPUT/input --cookie session=$SESSION -o input/$DAY.txt",
+    "fetch:input": "bash ./scripts/curl.sh",
     "solve": "node **/$DAY/ **/$DAY.txt",
     "test": "node_modules/.bin/mocha \"./**/*.test.js\"",
     "test:single": "node_modules/.bin/mocha -- \"./**/$DAY.test.js\"",
