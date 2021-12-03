@@ -1,8 +1,8 @@
 const {logResults} = require('../../utils/parser');
-const {getPositionTimesDepth} = require('./02.1');
-const {getFinalPositionTimesDepth} = require('./02.2');
+const {calculateDistance} = require('./02.1');
+const {calculateFinalDistance} = require('./02.2');
 
 logResults(
-  getPositionTimesDepth,
-  getFinalPositionTimesDepth
+  calculateDistance,
+  calculateFinalDistance
 );
